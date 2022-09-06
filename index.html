@@ -1,48 +1,70 @@
-html>
-<head>
-<title></title>
-</head>
+<html>
 <body>
-<form>
+<head>
+<style>
+	body{
+		text-align:center;
+		text-items:center;
+	}
+	#alert
+	{
+		background-color:lightgrey;
+	}
+	#img
+	{
+		background-color:lightblue;
+	}
+	
+	#email
+	{
+		text-align:center;
+		border:10px solid black;
+		padding:auto;
+		margin:auto;
+		width:auto;
+		height:auto;
+		background-color:lightyellow;
+	}
+</style>
+</head>
+<div id="alert">
+<h2>Click here to display your name and Registration No.</h2>
+<button onclick="AlertMessage()">CLICK HERE</button><br><br>
+</div><br>
 
-Name:<input type="text"name="Name"/><br>
-Registration No.:<input type="number"name="Registration No."/><br>
+<div id="img">
+<img onmouseover="largePic(this)"onmouseout="normPic(this)" src="mirza.jpeg"width="320px"height="180px">
+<p id="demo" onmouseover="largetext()"onmouseout="normtext()">SANIA MIRZA</p>
+</div><br>
 
-<h1>Quote</h1>
-<h2>"You will face many defeats in life, but never let yourself be defeated."</h3>
+<div id="email">
+<p>sneha_202000067@smit.smu.edu.in</p>
+</div>
+<script>
+	function AlertMessage()
+	{
+		alert("Name: Sneha Agarwal");
+		alert("Registration No.: 202000067");
+	}
+	function largePic(x)
+	{
+		x.style.width="640px";
+		x.style.height="360px";
+	}
+	function normPic(x)
+	{
+		x.style.width="320px";
+		x.style.height="180px";
+	}
+	function largetext()
+	{
+		document.getElementById("demo").style.fontSize="x-large";
+	}
+	function normtext()
+	{
+		document.getElementById("demo").style.fontSize="medium";
+	}
 
-<img src="personality.jpeg"alt="Mahatma Gandhi">
-<h3>Mahatma Gandhi</h3>
-
-<h4>Semester
-<select name="Semester">
-	<option value="Sem 1">Semester 1</options>
-	<option value="Sem 2">Semester 2</options>
-	<option value="Sem 3">Semester 3</options>
-	<option value="Sem 4">Semester 4</options>
-	<option value="Sem 5">Semester 5</options>
-	<option value="Sem 6">Semester 6</options>
-	<option value="Sem 7">Semester 7</options>
-	<option value="Sem 8">Semester 8</options>
-</select><br>
-
-<h4>Food Preference<br>
-	<input type="radio"name="food preference"value="Veg">Veg<br>
-	<input type="radio"name="food preference"value="Non-Veg">Non-Veg<br>
-
-<h4>Hobbies<br>
-	<input type="checkbox"name="Hobby1"value="Reading">My hobby is Reading<br>
-	<input type="checkbox"name="Hobby2"value="Dancing">My hobby is Dancing<br>
-	<input type="checkbox"name="Hobby3"value="Swimming">My hobby is Swimming<br>
-	<input type="checkbox"name="Hobby4"value="Other">Other<br><br>
-
-
-<textarea rows="5"cols="55" name="Feedback">Feedback</textarea><br><br>
-
-<input type="Submit">
-
+</script>
 </body>
-</form>
-
-
 </html>
